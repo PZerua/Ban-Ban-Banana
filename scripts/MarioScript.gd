@@ -24,14 +24,18 @@ func get_input():
 	if jump and is_on_floor():
 		jumping = true
 		velocity.y = jump_speed
+		$AnimatedSprite.animation = "Jump"
 	if right:
 		velocity.x += run_speed
-		$AnimatedSprite.animation = "Run"
+		if is_on_floor() and !jumping:
+			$AnimatedSprite.animation = "Run"
 		lastDirLeft = false
 	if left:
 		velocity.x -= run_speed
-		$AnimatedSprite.animation = "Run"
+		if is_on_floor() and !jumping:
+			$AnimatedSprite.animation = "Run"
 		lastDirLeft = true
+		
 	if velocity.length() > 0:
 		$AnimatedSprite.play()
 	else:
