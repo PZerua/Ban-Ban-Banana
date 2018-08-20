@@ -4,6 +4,7 @@ export (int) var speed  # How fast the player will move (pixels/sec).
 var screensize  # Size of the game window.
 
 func _ready():
+	add_to_group("player")
 	screensize = get_viewport_rect().size
 	pass
 
