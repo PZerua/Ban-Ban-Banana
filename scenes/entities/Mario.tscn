@@ -1,24 +1,24 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/entities/Mario.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/mario/marioRun0.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/mario/marioRun1.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/mario/marioRun2.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/mario/marioIdle.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/mario/marioIdle.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/mario/marioRun0.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/mario/marioRun1.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/mario/marioRun2.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/mario/marioJump.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "Run",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
@@ -31,7 +31,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 7, 8 )
 
-[node name="Mario" type="KinematicBody2D" index="0"]
+[node name="Mario" type="KinematicBody2D"]
 
 position = Vector2( 79.056, 69.5693 )
 input_pickable = false
