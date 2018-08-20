@@ -52,5 +52,5 @@ vec4 convert_color(vec4 c) {
 }
 
 void fragment() {
-	COLOR = convert_color(COLOR * texture(TEXTURE, UV)); 
+	COLOR = convert_color(textureLod(SCREEN_TEXTURE, SCREEN_UV, 0.0)); 
 }

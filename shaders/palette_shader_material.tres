@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://shaders/palette_shader.shader" type="Shader" id=1]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/conversion_mode = null
+shader_param/override_colors = null
+shader_param/color_0 = null
+shader_param/color_1 = null
+shader_param/color_2 = null
+shader_param/color_3 = null
+
