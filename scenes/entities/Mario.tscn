@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scripts/MarioScript.gd" type="Script" id=1]
-[ext_resource path="res://assets/marioIdle.png" type="Texture" id=2]
-[ext_resource path="res://assets/marioRun0.png" type="Texture" id=3]
-[ext_resource path="res://assets/marioRun1.png" type="Texture" id=4]
-[ext_resource path="res://assets/marioRun2.png" type="Texture" id=5]
-[ext_resource path="res://assets/marioJump.png" type="Texture" id=6]
+[ext_resource path="res://scripts/entities/Mario.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/mario/marioIdle.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/mario/marioRun0.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/mario/marioRun1.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/mario/marioRun2.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/mario/marioJump.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -31,7 +31,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 7, 8 )
 
-[node name="Mario" type="KinematicBody2D"]
+[node name="Mario" type="KinematicBody2D" index="0"]
 
 position = Vector2( 79.056, 69.5693 )
 input_pickable = false

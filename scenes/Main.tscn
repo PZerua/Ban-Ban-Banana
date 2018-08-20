@@ -1,29 +1,18 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/Main.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Banana.tscn" type="PackedScene" id=2]
-[ext_resource path="res://shaders/palette_shader_material.tres" type="Material" id=3]
-[ext_resource path="res://scenes/SampleMap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Mario.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/entities/Banana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/maps/SampleMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/entities/Mario.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shaders/palette_shader_material.tres" type="Material" id=5]
 
-[node name="Main" type="Control" index="0"]
+[node name="Main" type="Node" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 script = ExtResource( 1 )
 Banana = ExtResource( 2 )
 
-[node name="ShaderOverlay" type="ColorRect" parent="." index="0"]
+[node name="Background" type="ColorRect" parent="." index="0"]
 
-material = ExtResource( 3 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -34,22 +23,37 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.183594, 0.183594, 0.183594, 1 )
-_sections_unfolded = [ "Material" ]
+color = Color( 1, 1, 1, 1 )
 
-[node name="Node2D" parent="." index="1" instance=ExtResource( 4 )]
+[node name="SampleMap" parent="." index="1" instance=ExtResource( 3 )]
 
-[node name="Mario" parent="." index="2" instance=ExtResource( 5 )]
+[node name="Mario" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 113.803, 82.1248 )
 
-[node name="BulletCoolDown" type="Timer" parent="." index="3"]
+[node name="BulletCooldown" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 0.2
 one_shot = false
 autostart = false
 
-[connection signal="timeout" from="BulletCoolDown" to="." method="_on_BulletCoolDown_timeout"]
+[node name="ShaderOverlay" type="ColorRect" parent="." index="4"]
+
+material = ExtResource( 5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Material" ]
+
+[connection signal="timeout" from="BulletCooldown" to="." method="_on_BulletCoolDown_timeout"]
 
 

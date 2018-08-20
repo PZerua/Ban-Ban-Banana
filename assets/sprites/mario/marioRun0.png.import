@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/banana.png-004fbf40376422814e17da34febc9cf8.stex"
+path="res://.import/marioRun0.png-040e50d1ca8a424de006903e6b313d37.stex"
 
 [deps]
 
-source_file="res://assets/banana.png"
-dest_files=[ "res://.import/banana.png-004fbf40376422814e17da34febc9cf8.stex" ]
+source_file="res://assets/sprites/mario/marioRun0.png"
+dest_files=[ "res://.import/marioRun0.png-040e50d1ca8a424de006903e6b313d37.stex" ]
 
 [params]
 

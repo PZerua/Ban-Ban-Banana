@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/marioIdle.png-04b61c58fdbdd73ab6125271d25018f9.stex"
+path="res://.import/marioRun2.png-511ba2a354343056106e2c5e0275427b.stex"
 
 [deps]
 
-source_file="res://assets/marioIdle.png"
-dest_files=[ "res://.import/marioIdle.png-04b61c58fdbdd73ab6125271d25018f9.stex" ]
+source_file="res://assets/sprites/mario/marioRun2.png"
+dest_files=[ "res://.import/marioRun2.png-511ba2a354343056106e2c5e0275427b.stex" ]
 
 [params]
 

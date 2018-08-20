@@ -18,9 +18,9 @@ var lastDirLeft = false
 
 func get_input():
 	velocity.x = 0
-	var right = Input.is_action_pressed('ui_right')
-	var left = Input.is_action_pressed('ui_left')
-	var jump = Input.is_action_just_pressed('ui_select')
+	var right = Input.is_action_pressed('RIGHT')
+	var left = Input.is_action_pressed('LEFT')
+	var jump = Input.is_action_just_pressed('A')
 
 	if jump and is_on_floor():
 		jumping = true

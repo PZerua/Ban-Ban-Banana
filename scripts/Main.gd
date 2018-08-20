@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 export (PackedScene) var Banana
 
@@ -7,9 +7,8 @@ func _ready():
 	# Initialization here
 	pass
 
-
 func _process(delta):
-	if $BulletCoolDown.is_stopped() and Input.is_action_pressed('A'):
+	if $BulletCooldown.is_stopped() and Input.is_action_pressed('B'):
 		var banana = Banana.instance()
 		add_child(banana)
 		var bananaOffset
@@ -18,8 +17,8 @@ func _process(delta):
 		else:
 			banana.start($Mario.position + Vector2(10, 0), 0)
 
-		$BulletCoolDown.start()
+		$BulletCooldown.start()
 
 func _on_BulletCoolDown_timeout():
-	$BulletCoolDown.stop()
+	$BulletCooldown.stop()
 	pass # replace with function body
