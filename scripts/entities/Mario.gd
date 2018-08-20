@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export (int) var speed  # How fast the player will move (pixels/sec).
 var screensize  # Size of the game window.
+var lookDirection = Vector2(1.0, 0.0)
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -29,11 +30,13 @@ func get_input():
 		velocity.x += run_speed
 		if is_on_floor() and !jumping:
 			$AnimatedSprite.animation = "Run"
+		lookDirection = Vector2(1.0, 0.0)
 		lastDirLeft = false
 	if left:
 		velocity.x -= run_speed
 		if is_on_floor() and !jumping:
 			$AnimatedSprite.animation = "Run"
+		lookDirection = Vector2(-1.0, 0.0)
 		lastDirLeft = true
 		
 	if velocity.length() > 0:

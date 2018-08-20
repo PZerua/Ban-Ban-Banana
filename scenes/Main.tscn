@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/entities/Mario.tscn" type="PackedScene" id=4]
 [ext_resource path="res://shaders/palette_shader_material.tres" type="Material" id=5]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" index="0"]
 
 script = ExtResource( 1 )
 Banana = ExtResource( 2 )
@@ -24,6 +24,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Rect" ]
 
 [node name="SampleMap" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -31,7 +32,7 @@ color = Color( 1, 1, 1, 1 )
 
 position = Vector2( 113.803, 82.1248 )
 
-[node name="BulletCooldown" type="Timer" parent="." index="3"]
+[node name="BulletCoolDown" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 0.2
@@ -52,8 +53,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
-_sections_unfolded = [ "Material" ]
+_sections_unfolded = [ "Rect" ]
 
-[connection signal="timeout" from="BulletCooldown" to="." method="_on_BulletCoolDown_timeout"]
+[connection signal="timeout" from="BulletCoolDown" to="." method="_on_BulletCoolDown_timeout"]
 
 
