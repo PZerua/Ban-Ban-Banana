@@ -16,6 +16,7 @@ func _physics_process(delta):
 	rotate((randf() * 2.0 - 1.0) * 0.2)
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		velocity.x = 0.0
 		if (!$AnimationPlayer.is_playing()):
 			$AnimationPlayer.play("Destroy")
 		#if collision.collider.has_method("hit"):

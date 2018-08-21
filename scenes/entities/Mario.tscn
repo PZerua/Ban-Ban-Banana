@@ -6,7 +6,12 @@
 [ext_resource path="res://assets/sprites/mario/marioRun1.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/mario/marioRun2.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/mario/marioJump.png" type="Texture" id=6]
-[ext_resource path="res://scenes/entities/Pivot.gd" type="Script" id=7]
+[ext_resource path="res://scripts/Pivot.gd" type="Script" id=7]
+
+
+
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 
