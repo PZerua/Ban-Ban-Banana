@@ -15,8 +15,9 @@ func _process(delta):
 		$BulletCoolDown.start()
 		
 	# Sync background and post-process shader positions with camera. TODO: Fix this hack
-	$ShaderOverlay.rect_position = $Mario/Pivot/CameraOffset/Camera2D.get_camera_screen_center() - Vector2(80, 72)
-	$Background.rect_position = $Mario/Pivot/CameraOffset/Camera2D.get_camera_screen_center() - Vector2(80, 72)
+	var cam_pos = $Mario/Pivot/CameraOffset/Camera2D.get_camera_screen_center()
+	$ShaderOverlay.rect_position = cam_pos - Vector2(80, 72)
+	$Background.rect_position = cam_pos - Vector2(80, 72)
 
 func _on_BulletCoolDown_timeout():
 	$BulletCoolDown.stop()
