@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tilemap.png-cb34355437dd20d8bc68ae39a70fe29a.stex"
+path="res://.import/hand0.png-33376d5d6eb29201bd47899425275c8d.stex"
 
 [deps]
 
-source_file="res://assets/TileSets/tilemap.png"
-dest_files=[ "res://.import/tilemap.png-cb34355437dd20d8bc68ae39a70fe29a.stex" ]
+source_file="res://assets/sprites/mario/hand0.png"
+dest_files=[ "res://.import/hand0.png-33376d5d6eb29201bd47899425275c8d.stex" ]
 
 [params]
 
