@@ -5,7 +5,7 @@ export (PackedScene) var Banana
 func _process(delta):
 	if $BulletCoolDown.is_stopped() and Input.is_action_pressed('B'):
 		var banana = Banana.instance()
-		add_child(banana)
+		add_child_below_node($Player, banana)
 		var bananaOffset
 		if $Player.lastDirLeft:
 			banana.start($Player.position + Vector2(-10, 0), PI)
@@ -21,4 +21,4 @@ func _process(delta):
 
 func _on_BulletCoolDown_timeout():
 	$BulletCoolDown.stop()
-
+	
