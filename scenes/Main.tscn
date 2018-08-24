@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/entities/Banana.tscn" type="PackedScene" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://shaders/palette_shader_material.tres" type="Material" id=5]
 [ext_resource path="res://scenes/entities/Mob.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/entities/Witch.tscn" type="PackedScene" id=7]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 script = ExtResource( 1 )
 Banana = ExtResource( 2 )
@@ -70,8 +71,10 @@ _sections_unfolded = [ "Material", "Rect" ]
 [node name="Mob" parent="." index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 193.424, 59.8192 )
-run_speed = 40
-jump_speed = -100
+
+[node name="Mob2" parent="." index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 41.3727, 53.2312 )
 
 [connection signal="timeout" from="BulletCoolDown" to="." method="_on_BulletCoolDown_timeout"]
 

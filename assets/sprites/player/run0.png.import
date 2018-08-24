@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iddle_0.png-246fa3e4f73ade1e0272c795c852a609.stex"
+path="res://.import/run0.png-78200a6a210a3416b1a66089ca587720.stex"
 
 [deps]
 
-source_file="res://assets/sprites/mario/iddle_0.png"
-dest_files=[ "res://.import/iddle_0.png-246fa3e4f73ade1e0272c795c852a609.stex" ]
+source_file="res://assets/sprites/player/run0.png"
+dest_files=[ "res://.import/run0.png-78200a6a210a3416b1a66089ca587720.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

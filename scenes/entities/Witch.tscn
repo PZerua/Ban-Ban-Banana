@@ -1,31 +1,23 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/entities/Mob.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/cage.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/witch/witch0.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/witch/witch2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/witch/witch1.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Run",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "Jump",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 7.48535, 6.72853 )
+extents = Vector2( 5.73622, 7.98491 )
 
 [sub_resource type="Animation" id=3]
 
@@ -61,7 +53,7 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 7.55482, 6.72854 )
+extents = Vector2( 5.77374, 7.98491 )
 
 [node name="Mob" type="KinematicBody2D"]
 
@@ -78,9 +70,9 @@ gravity = 1200
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
-scale = Vector2( 0.02, 0.02 )
 frames = SubResource( 1 )
 animation = "Run"
+playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

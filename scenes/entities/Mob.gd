@@ -13,8 +13,8 @@ var jumping = false
 var dying = false
 
 export (int) var life = 20
-export (int) var run_speed = 20
-export (int) var jump_speed = -400
+export (int) var run_speed = 40
+export (int) var jump_speed = -100
 export (int) var gravity = 1200
 
 var velocity = Vector2()
@@ -76,4 +76,10 @@ func _physics_process(delta):
 
 func _on_DeathAnimation_animation_finished(anim_name):
 	queue_free()
+	pass # replace with function body
+
+
+func _on_Area2D_body_entered(body):
+	if body == get_parent().get_node("Player") && !dying:
+		body.hitted(Vector2(600, 200))
 	pass # replace with function body
