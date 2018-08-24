@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iddle1.png-e845fe93dff07acee048f556e385066c.stex"
+path="res://.import/hand1.png-082ebc94da534d9f8aa1c9a80ec975c2.stex"
 
 [deps]
 
-source_file="res://assets/sprites/mario/iddle1.png"
-dest_files=[ "res://.import/iddle1.png-e845fe93dff07acee048f556e385066c.stex" ]
+source_file="res://assets/sprites/player/hand1.png"
+dest_files=[ "res://.import/hand1.png-082ebc94da534d9f8aa1c9a80ec975c2.stex" ]
 
 [params]
 

@@ -7,15 +7,15 @@ func _process(delta):
 		var banana = Banana.instance()
 		add_child(banana)
 		var bananaOffset
-		if $Mario.lastDirLeft:
-			banana.start($Mario.position + Vector2(-10, 0), PI)
+		if $Player.lastDirLeft:
+			banana.start($Player.position + Vector2(-10, 0), PI)
 		else:
-			banana.start($Mario.position + Vector2(10, 0), 0)
+			banana.start($Player.position + Vector2(10, 0), 0)
 
 		$BulletCoolDown.start()
 		
 	# Sync background and post-process shader positions with camera. TODO: Fix this hack
-	var cam_pos = $Mario/Pivot/CameraOffset/Camera2D.get_camera_screen_center()
+	var cam_pos = $Player/Pivot/CameraOffset/Camera2D.get_camera_screen_center()
 	$ShaderOverlay.rect_position = cam_pos - Vector2(80, 72)
 	$Background.rect_position = cam_pos - Vector2(80, 72)
 

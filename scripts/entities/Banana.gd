@@ -17,10 +17,12 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity.x = 0.0
-		if (!$AnimationPlayer.is_playing()):
+		if !$AnimationPlayer.is_playing() && collision.collider.has_method("hit"):
+			collision.collider.hit()
+		if !$AnimationPlayer.is_playing():
 			$AnimationPlayer.play("Destroy")
-		#if collision.collider.has_method("hit"):
-			#collision.collider.hit()
+
+
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

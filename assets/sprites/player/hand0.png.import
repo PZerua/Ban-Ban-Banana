@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hand1.png-b094d54b432a74bd421fad81a37464bb.stex"
+path="res://.import/hand0.png-e918a7e904b5543c348eedbcaeb55086.stex"
 
 [deps]
 
-source_file="res://assets/sprites/mario/hand1.png"
-dest_files=[ "res://.import/hand1.png-b094d54b432a74bd421fad81a37464bb.stex" ]
+source_file="res://assets/sprites/player/hand0.png"
+dest_files=[ "res://.import/hand0.png-e918a7e904b5543c348eedbcaeb55086.stex" ]
 
 [params]
 
