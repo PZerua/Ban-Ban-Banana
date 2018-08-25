@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/entities/Banana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/TileSets/TileSetFloor.tres" type="TileSet" id=4]
+[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/ShaderOverlay.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/BulletCoolDown.tscn" type="PackedScene" id=7]
+
+[node name="Node" type="Node" index="0"]
+
+script = ExtResource( 1 )
+Banana = ExtResource( 2 )
+
+[node name="Background" parent="." index="0" instance=ExtResource( 3 )]
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 7
+collision_mask = 7
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 327680, 0, 0, 327681, 0, 0, 393218, 0, 0, 393219, 0, 0, 524288, 0, 0, 524289, 1, 0, 524290, 2, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Player" parent="." index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 56.4044, 119.562 )
+
+[node name="ShaderOverlay" parent="." index="3" instance=ExtResource( 6 )]
+
+[node name="BulletCoolDown" parent="." index="4" instance=ExtResource( 7 )]
+
+

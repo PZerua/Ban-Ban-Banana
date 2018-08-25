@@ -1,79 +1,39 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/entities/Banana.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/maps/SampleMap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/entities/Witch.tscn" type="PackedScene" id=5]
-[ext_resource path="res://shaders/palette_shader_material.tres" type="Material" id=6]
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/maps/SampleMap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/BulletCoolDown.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/entities/Witch.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/ShaderOverlay.tscn" type="PackedScene" id=8]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 script = ExtResource( 1 )
 Banana = ExtResource( 2 )
 
-[node name="Background" type="ColorRect" parent="." index="0"]
+[node name="Background" parent="." index="0" instance=ExtResource( 3 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -2.0
-margin_top = -2.0
-margin_right = 2.0
-margin_bottom = 2.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 1, 1, 1, 1 )
-_sections_unfolded = [ "Rect" ]
-
-[node name="SampleMap" parent="." index="1" instance=ExtResource( 3 )]
+[node name="SampleMap" parent="." index="1" instance=ExtResource( 4 )]
 
 _sections_unfolded = [ "Transform" ]
 
-[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 113.803, 82.1248 )
 
-[node name="BulletCoolDown" type="Timer" parent="." index="3"]
+[node name="BulletCoolDown" parent="." index="3" instance=ExtResource( 6 )]
 
-process_mode = 1
-wait_time = 0.2
-one_shot = false
-autostart = false
-
-[node name="Mob2" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Mob2" parent="." index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 41.3727, 53.2312 )
 
-[node name="Mob3" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Mob3" parent="." index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 265.102, 53.7582 )
 
-[node name="ShaderOverlay" type="ColorRect" parent="." index="6"]
-
-material = ExtResource( 6 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -2.0
-margin_top = -2.0
-margin_right = 2.0
-margin_bottom = 2.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 1, 1, 1, 1 )
-_sections_unfolded = [ "Material", "Rect" ]
-
-[connection signal="timeout" from="BulletCoolDown" to="." method="_on_BulletCoolDown_timeout"]
+[node name="ShaderOverlay" parent="." index="6" instance=ExtResource( 8 )]
 
 
