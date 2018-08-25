@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/suelogris.png-71ce28e6f8d2324ab638aa395024873a.stex"
+path="res://.import/suelogris.png-f5c25135b313f372613751a01cc6f228.stex"
 
 [deps]
 
-source_file="res://assets/TileSets/suelogris.png"
-dest_files=[ "res://.import/suelogris.png-71ce28e6f8d2324ab638aa395024873a.stex" ]
+source_file="res://assets/tilesets/suelogris.png"
+dest_files=[ "res://.import/suelogris.png-f5c25135b313f372613751a01cc6f228.stex" ]
 
 [params]
 

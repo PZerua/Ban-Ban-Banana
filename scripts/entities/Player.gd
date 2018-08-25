@@ -77,4 +77,5 @@ func _physics_process(delta):
 func _on_BananaSprite_animation_finished():
 	if $BananaSprite.animation == "Firing":
 		playingFiringAnim = false
+		$BananaSprite.frame = 0
 		$BananaSprite.stop()

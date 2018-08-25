@@ -20,5 +20,6 @@ func _process(delta):
 	$Background.rect_position = cam_pos - Vector2(80, 72)
 
 func _on_BulletCoolDown_timeout():
+	print("AAAAAAAAAAAAAAAAAAAAA")
 	$BulletCoolDown.stop()
 	

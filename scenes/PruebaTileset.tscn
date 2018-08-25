@@ -44,4 +44,6 @@ position = Vector2( 56.4044, 119.562 )
 
 [node name="BulletCoolDown" parent="." index="4" instance=ExtResource( 7 )]
 
+[connection signal="timeout" from="BulletCoolDown" to="." method="_on_BulletCoolDown_timeout"]
+
 
